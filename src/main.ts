@@ -134,6 +134,7 @@ const setupIntersectionObserver = () => {
 const setupStoryExpansion = () => {
     const expandBtns = document.querySelectorAll('.btn-expand');
     const closeBtns = document.querySelectorAll('.btn-close');
+    const backStoryBtns = document.querySelectorAll('.btn-back-story');
 
     expandBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -146,12 +147,18 @@ const setupStoryExpansion = () => {
         });
     });
 
+    const closePanel = (btn: Element) => {
+        const panel = (btn as HTMLElement).closest('.full-story-panel');
+        panel?.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
     closeBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const panel = (btn as HTMLElement).closest('.full-story-panel');
-            panel?.classList.remove('active');
-            document.body.style.overflow = '';
-        });
+        btn.addEventListener('click', () => closePanel(btn));
+    });
+
+    backStoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => closePanel(btn));
     });
 };
 
