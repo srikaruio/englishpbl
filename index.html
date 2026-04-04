@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travellers of the Last Night | Immersive Journey</title>
+    <meta name="description" content="Explore the exact original story of Ali, Angoori, Namu, and Maggie. An interactive experience based on Travellers of the Last Night." />
+  </head>
+  <body>
+    <div id="star-container"></div>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo serif">Last Night</div>
+        
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero-animation">Home</a></li>
+          <li><a href="#ali">Ali</a></li>
+          <li><a href="#angoori">Angoori</a></li>
+          <li><a href="#maggie">Maggie</a></li>
+          <li><a href="#quiz-container" id="nav-quiz-btn">Quiz</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO SECTION (SCROLL ANIMATION) -->
+      <section id="hero-animation" class="hero-sticky-section">
+        <div class="sticky-container">
+          <canvas id="hero-canvas"></canvas>
+          <div class="hero-overlay container visible">
+            <h1 class="glow-text">Travellers of the Last Night</h1>
+            <p class="subtitle serif">Four Souls. One World. An Endless Human Thread.</p>
+            <button class="btn-start btn-glow" id="start-journey">Start Journey</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: ALI (CONTENT CONTINUITY) -->
+      <div class="transition-line no-margin">A dusty veranda, a cold stone bench, and a wait that never ends...</div>
+      
+      <section id="ali" class="story-section-wrapper hero-extension">
+        <div class="container story-section">
+
+          <div class="image-wrapper reveal-left">
+            <img src="/images/ali.png" alt="Coachman Ali at the post office" />
+          </div>
+          <div class="content reveal-right">
+            <h2>The Coachman's Vigil</h2>
+            <div class="preview">
+              <p>"The early morning light was just beginning to touch the wooden arch of the local post office — a building as grey and stoic as the man who approached it."</p>
+            </div>
+            <button class="btn-expand btn-glow" data-target="ali-full">View Full Story</button>
+          </div>
+        </div>
+        
+        <!-- EXPANDABLE PANEL -->
+        <div id="ali-full" class="full-story-panel">
+          <div class="panel-content">
+            <button class="btn-close">&times;</button>
+            <h2 class="serif">The Coachman's Vigil</h2>
+            <div class="full-text">
+              <p>The early morning light was just beginning to touch the wooden arch of the local post office — a building as grey and stoic as the man who approached it. Coachman Ali arrived the way he always did: slowly, deliberately, like a man who had long made peace with time.</p>
+              <p>He was old now, and bent. His cloak was tattered at the edges, worn thin from years of the same cold wind sweeping across the same empty square. He lowered himself onto the stone bench on the veranda with a care that spoke not of weakness, but of reverence — as though this bench were sacred ground, and he a pilgrim returning to a shrine.</p>
+              <blockquote>"Because hope, he had discovered, is not a thing that lives in your hand. It lives in the act of reaching."</blockquote>
+              <p>For five years, he had been the first to arrive and the last to leave. The townspeople had long since stopped trying to understand him. To them, he was simply the old madman, the former coachman who sat and waited for a letter from a daughter who had vanished into the world on the arm of a soldier. They whispered about him the way people whisper about things they cannot explain — with a mixture of pity and unease.</p>
+              <p>But Ali did not feel like a madman. He felt like a man in love — which, he supposed, was not so very different. Every morning he drew his cloak tight against the wind and fixed his eyes on the door of the post office, listening for the moment the clerk's voice would rise above the shuffle of papers and call out the only word that still tethered him to the living world:</p>
+              <p class="center serif italic">"Miriam."</p>
+              <p>The letter never came. But Ali came. Each morning, without fail. Because hope, he had discovered, is not a thing that lives in your hand. It lives in the act of reaching.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: ANGOORI & NAMU -->
+      <div class="transition-line">Deep in the village, where bells tinkle and laundry is washed by a philosopher...</div>
+
+      <section id="angoori" class="story-section-wrapper">
+        <div class="container story-section reverse">
+          <div class="image-wrapper reveal-right">
+            <img src="/images/angoori.png" alt="Angoori and Prabhati near the well" />
+          </div>
+          <div class="content reveal-left">
+            <h2>The Young Bride & the Dhobi</h2>
+            <div class="preview">
+              <p>"Not far from the post office, the air smelled of damp earth and woodsmoke. In a small hut shielded by the heavy, protective shade of ancient neem trees, Angoori was already awake..."</p>
+            </div>
+            <button class="btn-expand btn-glow" data-target="angoori-full">View Full Story</button>
+          </div>
+        </div>
+
+        <div id="angoori-full" class="full-story-panel">
+          <div class="panel-content">
+            <button class="btn-close">&times;</button>
+            <h2 class="serif">The Young Bride & the Dhobi</h2>
+            <div class="full-text">
+              <p>Not far from the post office, the air smelled of damp earth and woodsmoke. In a small hut shielded by the heavy, protective shade of ancient neem trees, Angoori was already awake and moving through her morning chores. She was young — startlingly so — and her steps had a music to them: a rhythmic, tinkling cascade from the hundred silver ankle-bells she wore. The sound rang out across the still yard, joyful and slightly mournful at once, the way music often is when it echoes through an empty space.</p>
+              <p>Angoori sat near the old moss-covered well to cool herself and let her gaze fall on her husband, Prabhati. He was an old servant — short, loose-jawed, weathered to a kind of permanent stillness. Beside her youth and brightness, he looked like a tree from another season entirely. She watched him and thought, as she often did, about the wild weed the village women spoke of. They said that if a man slipped a girl this enchanted herb, she would lose her senses and follow him like a shadow for the rest of her days.</p>
+              <blockquote>"She wondered if love ever truly began in the heart — or whether it was always something slipped into you without your knowing."</blockquote>
+              <p>She wondered about that. About whether love ever truly began in the heart — or whether it was always something slipped into you without your knowing. A spell. A seed dropped in the dark. It was into this quiet wondering that Namu arrived. The dhobi moved through the street with a mountain of laundry balanced on his back and the calm of a man who had long ago decided that the world's chaos was simply not his problem. He stopped near the well to rest, mopping his face with a corner of cloth that may or may not have belonged to someone else.</p>
+              <p>Namu was a philosopher of the ordinary. When customers raged at him for late deliveries, he received their anger with a majestic shrug. When he was found wearing a customer's finest silk shirt — which happened more often than it should — he explained it with the serenity of a holy man. To Namu, the clothes he carried were simply borrowed skins. The complaints of the world were like the dust he beat from the fabric each morning: loud for a moment, then gone.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: MAGGIE -->
+      <div class="transition-line">Across the sea, through the grey fog of London, a sister saves her pennies for flowers...</div>
+
+      <section id="maggie" class="story-section-wrapper">
+        <div class="container story-section">
+          <div class="image-wrapper reveal-left">
+            <img src="/images/maggie.png" alt="Maggie in a London restaurant" />
+          </div>
+          <div class="content reveal-right">
+            <h2>The Girl in London</h2>
+            <div class="preview">
+              <p>"Across the vast distance of memory and sea, the story shifts. The air here is different — damp, grey, carrying the faint smell of coal and rain-soaked stone."</p>
+            </div>
+            <button class="btn-expand btn-glow" data-target="maggie-full">View Full Story</button>
+          </div>
+        </div>
+
+        <div id="maggie-full" class="full-story-panel">
+          <div class="panel-content">
+            <button class="btn-close">&times;</button>
+            <h2 class="serif">The Girl in London</h2>
+            <div class="full-text">
+              <p>Across the vast distance of memory and sea, the story shifts. The air here is different — damp, grey, carrying the faint smell of coal and rain-soaked stone. We are in London, in a dim vegetarian restaurant on a side street, where the warmth feels borrowed and the light falls like an apology.</p>
+              <p>Maggie sat at a corner table alone. She was barely thirteen — a girl with large, dark eyes that held more sorrow than a child's eyes should ever need to hold. Her clothes were thin and spoke of poverty plainly, without shame, the way honest things sometimes do. But her dignity remained intact. It was the kind of dignity that could not be purchased or stolen — only grown, slowly, through suffering.</p>
+              <blockquote>"She was not asking about geography at all."</blockquote>
+              <p>She worked long hours as a typist, her small fingers learning the sharp rhythm of the keys so that she might bring home enough money for her widowed mother to eat. Every penny beyond that was saved for flowers. Not for herself — never for herself — but for the grave of a brother she prayed was only missing, not gone.</p>
+              <p>On this particular evening, a stranger had come into the restaurant — a man from India. Maggie watched him for a long moment before gathering her courage and crossing the room. She stood before him, twisting her hands together, and asked the question that had been living inside her like a wound for months:</p>
+              <p class="italic center serif">"Is India a very dangerous place?"</p>
+              <p>Her voice was barely a whisper. The weight behind it was enormous. For her, India was not a country on a map. It was the last known location of her brother — the place the war had taken him, the place that might give him back, or might not. Every day she waited for news. Every day the silence answered her instead. The stranger looked at her — at the thinness of her coat, at the steadiness of her eyes, at the flowers she clutched as though they were the last warm thing in a cold world — and understood that she was not asking about geography at all.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: THE CONVERGENCE -->
+      <div class="transition-line">As the sun dips below the horizon, separate lives align in a quiet unity of spirit...</div>
+
+      <section id="convergence" class="story-section-wrapper">
+        <div class="container story-section">
+          <div class="image-wrapper reveal-up">
+            <img src="/images/convergence.png" alt="Convergence of souls under stars" />
+          </div>
+          <div class="content center" style="text-align: center; width: 100%;">
+            <h2>The Convergence</h2>
+            <div class="preview">
+              <p>"As the sun dipped below the horizon, something invisible began to happen. Not in space, not in time, but in the quiet unity of spirit that defines what it means to be human."</p>
+            </div>
+            <button class="btn-expand btn-glow" data-target="convergence-full">View Full Story</button>
+          </div>
+        </div>
+
+        <div id="convergence-full" class="full-story-panel">
+          <div class="panel-content">
+            <button class="btn-close">&times;</button>
+            <h2 class="serif">The Convergence</h2>
+            <div class="full-text">
+              <p>As the sun dipped below the horizon, something invisible began to happen. The lives of these four souls — so different in language, in landscape, in the particular shape of their grief — began to converge. Not in space, not in time, but in the quiet unity of spirit that defines what it means to be human.</p>
+              <p>In his post office square, Ali stood up slowly from his bench. His legs were stiff from the cold. The clerk had not called his name today. The clerk never called his name. But something was different this evening — a lightness in his chest that he could not account for. He stood there in the gathering mist and understood, perhaps for the first time, that the letter itself no longer mattered as much as the love that allowed him to wait for it. The waiting was not emptiness. The waiting was full. It was the most complete thing left in his life — this act of showing up, of refusing to give Miriam up to silence.</p>
+              <blockquote>"The waiting was not emptiness. The waiting was full."</blockquote>
+              <p>In her hut beneath the neem trees, Angoori watched the first stars appear. The silver bells on her ankles were still now. She thought about Prabhati — his quietness, his slowness, his particular way of aging in the chair beside her. And she felt something she had not expected to feel: tenderness. Not the wild, enchanted helplessness of the village weed stories, but something deeper and stranger. The empathy of shared life. The love that grows not because it is planted, but because two people have sat long enough in the same silence to become part of the sameworld.</p>
+              <p>Namu, meanwhile, hitched his great bundle of laundry higher on his back and disappeared into the shadows of the studio district. He knew, with a philosopher's certainty, that tomorrow the shirts would be dirty again. The complaints would return. The world would resume its noise. But tonight, walking in the quiet dark, the world felt clean. That was enough.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: THE LAST NIGHT -->
+      <div class="transition-line">Stars press close to the earth, claiming the landscape for the last night...</div>
+
+      <section id="last-night" class="story-section-wrapper">
+        <div class="container story-section">
+          <div class="content center" style="text-align: center; width: 100%;">
+            <h2>The Last Night</h2>
+            <div class="preview">
+              <p>"Night finally claimed the landscape... something was ending and something was beginning. Prove something that the night could not erase."</p>
+            </div>
+            <button class="btn-expand btn-glow" data-target="last-night-full">View Full Story</button>
+          </div>
+        </div>
+
+        <div id="last-night-full" class="full-story-panel">
+          <div class="panel-content">
+            <button class="btn-close">&times;</button>
+            <h2 class="serif">The Last Night</h2>
+            <div class="full-text">
+              <p>Night finally claimed the landscape. In India, the stars pressed close to the earth. In London, a thin fog drifted through the gaslit streets. And in all of these places — in the still hut, in the misted square, in the dim restaurant — something was ending and something was beginning.</p>
+              <p>Maggie stood before a small floral stall on the pavement. She had been saving for weeks. She had come to buy flowers for her brother's grave — flowers for a hope she was not yet ready to surrender. But standing there in the chill London air, with the city humming quietly around her, she did something unexpected. She bought two bouquets. One for the grave. And one — a single white rose — for her mother's table.</p>
+              <blockquote>"Hope is what you do when the news is silent."</blockquote>
+              <p>It was a small act. It cost almost nothing. But it was, in its own way, everything. It was Maggie choosing — in the middle of loss, in the middle of uncertainty, in the middle of a world that had given her very little tenderness — to create beauty for someone she loved. Not because things were going to be fine. Not because the news from the East had been good. But because hope is not a response to good news. Hope is what you do when the news is silent.</p>
+              <p>These four travellers — Ali with his cold bench, Angoori with her silver bells, Namu with his borrowed shirts, and Maggie with her white rose — proved something that the night could not erase. The human heart, in its grief and its patience and its stubborn refusal to stop loving, is the same everywhere.</p>
+              <p>From the dusty post offices of Gujarat to the rainy pavements of London, from old men who wait to young girls who hope, from washermen who shrug at the world to brides who discover empathy in silence — they were all lit by the same small, undying flame. They were proof that in all of our loneliness, in all of our waiting and enduring and laughing and aching — no one truly travels alone.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIFE LESSONS SECTION -->
+      <section id="lessons">
+        <div class="container animate-up">
+          <h2 class="serif center glow-text" style="text-align: center; margin-bottom: 3rem;">Lessons from the Story</h2>
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <h3>Love is an Act</h3>
+              <p>Ali's daily vigil is not delusion — it is devotion in its purest form. Real love shows up, even when there is no reward for showing up.</p>
+            </div>
+            <div class="lesson-card">
+              <h3>Hope Without Certainty</h3>
+              <p>Hope does not require certainty. Maggie buys a rose for her mother anyway. Hope is the decision to create warmth when the world offers cold.</p>
+            </div>
+            <div class="lesson-card">
+              <h3>Unexpected Wisdom</h3>
+              <p>Wisdom lives in unexpected places. Namu the washerman understands that noise is temporary, that life's complaints are like dust — and that tonight, the world can be clean.</p>
+            </div>
+            <div class="lesson-card">
+              <h3>Shared Silence</h3>
+              <p>Love grows in shared silence. Angoori finds tenderness through the slow, unremarkable accumulation of a shared life — and that is more profound than any spell.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL SECTION -->
+      <section id="final" class="final">
+        <div class="container animate-up">
+          <blockquote class="serif italic">"We are all travellers of the last night — and we are never as alone as we fear."</blockquote>
+          <button class="btn-start btn-glow btn-top" id="return-top">Continue the Journey</button>
+        </div>
+      </section>
+
+      <!-- QUIZ SECTION -->
+      <section id="quiz-experience" class="quiz-section-wrapper">
+        <div id="quiz-container" class="quiz-card">
+          <div id="quiz-start-screen" class="quiz-screen active">
+            <h2 class="serif">Test Your Journey</h2>
+            <p>How deeply did you feel the threads of these four lives?</p>
+            <button id="start-quiz-btn" class="btn-glow btn-start-quiz">Start Quiz</button>
+          </div>
+
+          <div id="quiz-play-screen" class="quiz-screen">
+            <div class="quiz-header">
+              <div class="progress-info">
+                <span id="section-title" class="serif gold">The Coachman's Vigil</span>
+                <span id="question-count">Question 1 of 25</span>
+              </div>
+              <div class="progress-bar-container">
+                <div id="progress-bar-fill" class="progress-bar-fill"></div>
+              </div>
+              <div id="section-progress" class="section-indicator">Section 1/5</div>
+            </div>
+
+            <div id="question-container" class="question-container">
+              <h3 id="question-text">Question text goes here?</h3>
+              <div id="options-container" class="options-grid">
+                <!-- Options will be injected here -->
+              </div>
+            </div>
+
+            <div class="quiz-controls">
+              <div class="left-controls">
+                <button id="prev-question-btn" class="btn-quiz-nav" title="Previous Question">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button id="home-quiz-btn" class="btn-quiz-nav" title="Exit to Quiz Home">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </button>
+              </div>
+              <div class="right-controls">
+                <button id="skip-question-btn" class="btn-quiz-alt">Skip</button>
+                 <button id="submit-answer-btn" class="btn-glow btn-submit-quiz" disabled>Submit Quiz</button>
+                 <button id="next-question-btn" class="btn-quiz-nav" title="Next Question">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+            <div id="quiz-result-screen" class="quiz-screen">
+            <h2 class="serif">Your Journey Ends</h2>
+            <div class="score-display">
+              <span id="final-score">0</span><span class="total-possible">/25</span>
+            </div>
+            <p id="result-message" class="result-message">Performance message goes here.</p>
+            <div class="result-controls">
+              <button id="restart-quiz-btn" class="btn-glow">Try Again</button>
+              <button id="exit-quiz-btn" class="btn-quiz-alt">Back to Home</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
