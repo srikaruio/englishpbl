@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+ 
+# Large files and redundant assets
+ezgif-51262944965b4b2c-png-split.zip
+ezgif-51262944965b4b2c-png-split/
+public/hero-frames/

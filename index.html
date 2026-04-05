@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travellers of the Last Night | Immersive Journey</title>
     <meta name="description" content="Explore the exact original story of Ali, Angoori, Namu, and Maggie. An interactive experience based on Travellers of the Last Night." />
+    <!-- PDF.js & Flipbook Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
   </head>
   <body>
     <div id="star-container"></div>
@@ -20,13 +23,13 @@
         <ul class="nav-links" id="nav-links">
           <li><a href="#hero-animation">Home</a></li>
           <li><a href="#ali">Ali</a></li>
-          <li><a href="#angoori">Angoori</a></li>
-          <li><a href="#angoori">Namu</a></li>
+          <li><a href="#angoori">Namu & Angoori</a></li>
           <li><a href="#maggie">Maggie</a></li>
           <li><a href="#convergence">Convergence</a></li>
           <li><a href="#last-night">Summary</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#quiz-experience" id="nav-quiz-btn">Quiz</a></li>
+          <li><a href="#ebook-section">Read Book</a></li>
+          <li><a href="#quiz-container" id="nav-quiz-btn">Quiz</a></li>
         </ul>
       </div>
     </nav>
@@ -58,11 +61,14 @@
             <div class="preview">
               <p>"The early morning light was just beginning to touch the wooden arch of the local post office — a building as grey and stoic as the man who approached it."</p>
             </div>
-            <button class="btn-expand btn-glow" data-target="ali-full">View Full Story</button>
+            <div class="btn-group">
+              <button class="btn-expand btn-glow" data-target="ali-full">View Full Story</button>
+              <button class="btn-expand btn-glow btn-outcomes" data-target="ali-outcomes">View Outcomes</button>
+            </div>
           </div>
         </div>
         
-        <!-- EXPANDABLE PANEL -->
+        <!-- EXPANDABLE PANEL: FULL STORY -->
         <div id="ali-full" class="full-story-panel">
           <div class="panel-content">
             <div class="panel-header">
@@ -84,6 +90,39 @@
             </div>
           </div>
         </div>
+
+        <!-- EXPANDABLE PANEL: OUTCOMES -->
+        <div id="ali-outcomes" class="full-story-panel outcome-panel">
+          <div class="panel-content">
+            <div class="panel-header">
+              <button class="btn-close">&times;</button>
+              <button class="btn-back-story btn-quiz-alt">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Back to Journey
+              </button>
+            </div>
+            <h2 class="serif gold">Lessons from Ali's Story</h2>
+            <div class="full-text outcomes-list">
+              <div class="outcome-item">
+                <h3>Love is a daily practice</h3>
+                <p>Love is not a single feeling, but a discipline. Ali proves that love is not a moment — he shows up for it every single morning, whether or not it rewards him.</p>
+              </div>
+              <div class="outcome-item">
+                <h3>Waiting with purpose</h3>
+                <p>Waiting with purpose is not weakness. While the world sees Ali’s waiting as madness, holding a person in your heart across time and silence is one of the most powerful things a human being can do.</p>
+              </div>
+              <div class="outcome-item">
+                <h3>Dignity through self-worth</h3>
+                <p>Dignity does not require validation. Ali does not need the town’s understanding to maintain his sense of self; he carries his love quietly, and that is enough.</p>
+              </div>
+              <div class="outcome-item">
+                <h3>The act is the meaning</h3>
+                <p>Ali never receives his letter, but he realises that the letter was never the point. The love that made him come back each day — that was the point.</p>
+              </div>
+              <blockquote class="outcome-quote">“Love does not expire because it goes unanswered.”</blockquote>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- SECTION: ANGOORI & NAMU -->
@@ -99,7 +138,10 @@
             <div class="preview">
               <p>"Not far from the post office, the air smelled of damp earth and woodsmoke. In a small hut shielded by the heavy, protective shade of ancient neem trees, Angoori was already awake..."</p>
             </div>
-            <button class="btn-expand btn-glow" data-target="angoori-full">View Full Story</button>
+            <div class="btn-group">
+              <button class="btn-expand btn-glow" data-target="angoori-full">View Full Story</button>
+              <button class="btn-expand btn-glow btn-outcomes" data-target="angoori-outcomes">View Outcomes</button>
+            </div>
           </div>
         </div>
 
@@ -122,6 +164,39 @@
             </div>
           </div>
         </div>
+
+        <!-- EXPANDABLE PANEL: OUTCOMES -->
+        <div id="angoori-outcomes" class="full-story-panel outcome-panel">
+          <div class="panel-content">
+            <div class="panel-header">
+              <button class="btn-close">&times;</button>
+              <button class="btn-back-story btn-quiz-alt">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Back to Journey
+              </button>
+            </div>
+            <h2 class="serif gold">Lessons from Their Stories</h2>
+            <div class="full-text outcomes-list">
+              <div class="outcome-item">
+                <h3>Love is grown, not found</h3>
+                <p>Angoori teaches us that the deepest love does not arrive in a flash. It grows, slowly and quietly, in the shared ground of everyday life.</p>
+              </div>
+              <div class="outcome-item">
+                <h3>Presence as wisdom</h3>
+                <p>Namu lives entirely in the present moment, without dreading the future or grieving the past. His contentment is a form of enlightenment that the most educated characters do not possess.</p>
+              </div>
+              <div class="outcome-item">
+                <h3>Profound truths in simple lives</h3>
+                <p>Neither Angoori nor Namu is important in the world’s terms, but both carry within them an aliveness that makes their small stories feel enormous.</p>
+              </div>
+              <div class="outcome-item">
+                <h3>Active Acceptance</h3>
+                <p>Both Namu and Angoori choose to find beauty in what is, rather than bitterness about what isn’t. Their acceptance is an active choice, not a passive defeat.</p>
+              </div>
+              <blockquote class="outcome-quote">“The life in front of you is the life worth paying attention to.”</blockquote>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- SECTION: MAGGIE -->
@@ -137,7 +212,10 @@
             <div class="preview">
               <p>"Across the vast distance of memory and sea, the story shifts. The air here is different — damp, grey, carrying the faint smell of coal and rain-soaked stone."</p>
             </div>
-            <button class="btn-expand btn-glow" data-target="maggie-full">View Full Story</button>
+            <div class="btn-group">
+              <button class="btn-expand btn-glow" data-target="maggie-full">View Full Story</button>
+              <button class="btn-expand btn-glow btn-outcomes" data-target="maggie-outcomes">View Outcomes</button>
+            </div>
           </div>
         </div>
 
@@ -162,6 +240,38 @@
             </div>
           </div>
         </div>
+
+        <!-- EXPANDABLE PANEL: OUTCOMES -->
+        <div id="maggie-outcomes" class="full-story-panel outcome-panel">
+          <div class="panel-content">
+            <div class="panel-header">
+              <button class="btn-close">&times;</button>
+              <button class="btn-back-story btn-quiz-alt">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Back to Journey
+              </button>
+            </div>
+            <h2 class="serif gold">Lessons from Maggie's Story</h2>
+            <div class="full-text outcomes-list">
+              <div class="outcome-item">
+                <h3>Hope is a verb</h3>
+                <p>Maggie does not wait to feel hopeful before she acts. She acts first, and lets the hope follow. The white rose is not a response to good news — it is a decision made in spite of the silence.</p>
+              </div>
+              <div class="outcome-item">
+                <h3>Dignity independent of context</h3>
+                <p>Maggie has very little by the world’s measure, but she carries herself with a wholeness that demands respect. Dignity is something you maintain, not something you are given.</p>
+              </div>
+              <div class="outcome-item">
+                <h3>Love in exhaustion</h3>
+                <p>Maggie works all day and still saves something for flowers. She is tired and sad, yet she finds a way to create beauty for someone else. That is love at its most real.</p>
+              </div>
+              <div class="outcome-item">
+                <h3>The weight on the young</h3>
+                <p>Maggie’s story reminds us that the cost of conflict is not only borne by soldiers. It spreads to sisters and thirteen-year-old girls who ask quiet, heartbreaking questions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- SECTION: THE CONVERGENCE -->
@@ -173,12 +283,11 @@
             <img src="/images/convergence.png" alt="Convergence of souls under stars" />
           </div>
           <div class="content reveal-left">
-            <div class="section-tag serif">Summary</div>
             <h2>The Convergence</h2>
             <div class="preview">
-              <p>"As the sun dipped below the horizon, something invisible began to happen. Not in space, not in time, but in the quiet unity of spirit that defines what it means to be human."</p>
+              <p>"This is the part of the story that takes your breath away — not because something dramatic happens, but because you realise something quietly and completely."</p>
             </div>
-            <button class="btn-expand btn-glow" data-target="convergence-full">View Full Story</button>
+            <button class="btn-expand btn-glow" data-target="convergence-full">Explore the Convergence</button>
           </div>
         </div>
 
@@ -191,16 +300,22 @@
                 Back to Journey
               </button>
             </div>
-            <h2 class="serif">The Convergence</h2>
+            <h2 class="serif">The Convergence: [ FOUR STRANGERS, ONE MOMENT ]</h2>
             <div class="full-text">
-              <p>As the sun dipped below the horizon, something invisible began to happen. The lives of these four souls — so different in language, in landscape, in the particular shape of their grief — began to converge. Not in space, not in time, but in the quiet unity of spirit that defines what it means to be human.</p>
-              <p>In his post office square, Ali stood up slowly from his bench. His legs were stiff from the cold. The clerk had not called his name today. The clerk never called his name. But something was different this evening — a lightness in his chest that he could not account for. He stood there in the gathering mist and understood, perhaps for the first time, that the letter itself no longer mattered as much as the love that allowed him to wait for it. The waiting was not emptiness. The waiting was full. It was the most complete thing left in his life — this act of showing up, of refusing to give Miriam up to silence.</p>
-              <blockquote>"The waiting was not emptiness. The waiting was full."</blockquote>
-              <p>In her hut beneath the neem trees, Angoori watched the first stars appear. The silver bells on her ankles were still now. She thought about Prabhati — his quietness, his slowness, his particular way of aging in the chair beside her. And she felt something she had not expected to feel: tenderness. Not the wild, enchanted helplessness of the village weed stories, but something deeper and stranger. The empathy of shared life. The love that grows not because it is planted, but because two people have sat long enough in the same silence to become part of the sameworld.</p>
-              <p>Namu, meanwhile, hitched his great bundle of laundry higher on his back and disappeared into the shadows of the studio district. He knew, with a philosopher's certainty, that tomorrow the shirts would be dirty again. The complaints would return. The world would resume its noise. But tonight, walking in the quiet dark, the world felt clean. That was enough.</p>
+              <p>They are all performing the same act. They are all choosing — in the face of loss, uncertainty, ridicule, poverty, silence — to love. To continue. To show up for something that the world around them might not even recognise as valuable. Ali shows up for Miriam. Angoori shows up for her marriage. Namu shows up for the shirts. Maggie shows up for her mother.</p>
+              
+              <p>And none of them are rewarded for it in any obvious way. Ali gets no letter. Angoori gets no enchantment. Namu gets no recognition. Maggie gets no news from the East. The world does not suddenly become fair or kind or generous. It simply continues. And so do they.</p>
+              
+              <p>This is the point of the convergence. The story is not saying that love fixes things. It is saying something much harder and much more honest: that love continues even when things are not fixed. That hope is not a feeling that arrives when circumstances improve. It is a practice. A discipline. A daily decision to keep the lamp lit even when no one is coming down the road.</p>
+              
+              <p>Four strangers. Four different corners of the world. Four different kinds of love. And all four of them, in this one quiet night, demonstrating the same stubborn, extraordinary, deeply human truth.</p>
+              
+              <blockquote>"They were the small, flickering lamps that kept the darkness at bay, reminding anyone who cared to listen that no one truly travels alone."</blockquote>
             </div>
           </div>
         </div>
+      </section>
+
       </section>
 
       <!-- SECTION: THE LAST NIGHT -->
@@ -212,10 +327,9 @@
             <img src="/images/summary.png" alt="The Convergence: A shared thread of human emotion">
           </div>
           <div class="content reveal-right">
-            <div class="section-tag serif">Summary</div>
             <h2>The Shared Thread</h2>
             <div class="preview">
-              <p>"Night finally claimed the landscape... something was ending and something was beginning. A shared thread of human emotion, woven across oceans and through time, proving that no soul truly travels alone."</p>
+              <p>"The same story, told four different times, in four different voices, in four different corners of the world. The story of a human being who has every reason to give up — and doesn’t."</p>
             </div>
             <button class="btn-expand btn-glow" data-target="last-night-full">Explore the Summary</button>
           </div>
@@ -231,12 +345,26 @@
                 Back to Journey
               </button>
             </div>
-            <h2 class="serif">The Shared Thread</h2>
+            <h2 class="serif">The Conclusion: [ TYING IT ALL TOGETHER ]</h2>
             <div class="full-text">
-              <p>In the quiet of the night, four lives that seemed worlds apart were revealed to be part of the same grand tapestry. Coachman Ali, sitting on his veranda in the dust of India; Angoori, finding the meaning of love in the silence of shared chores; and Maggie, walking the grey streets of London with flowers for a ghost — they were all travellers of the same night.</p>
-              <p>The story teaches us that human emotions — hope, love, loss, and longing — are universal. They cross geographical boundaries and social divides. Whether it is a letter that never arrives or a bouquet bought in faith, these are the threads that bind the human heart together.</p>
-              <blockquote>"No one truly travels alone. We are all connected by the invisible threads of our shared humanity."</blockquote>
-              <p>As the final night claimed the landscape, it did not bring isolation, but a realization. Something was ending, yes — the individual struggles of the day — but something was beginning: a collective story of resilience. They proved that the night could not erase the connections we forge through love and hope.</p>
+              <p>We have now heard four stories. An old man on a cold stone bench. A young bride with silver bells and quiet questions. A washerman who carries the world lightly. A thirteen-year-old girl in a grey London street, holding a white rose. On the surface, they have nothing to do with each other. But by now you have seen what the story always wanted you to see: that they are one story.</p>
+              
+              <p><em>Travellers of the Last Night</em> is a story about what love looks like from the inside, when no one is watching and there is no reward for it. It is about love not as a feeling but as a commitment. Not as something you fall into, but something you get up for, every single morning, even when the bench is cold and the letter hasn’t come.</p>
+
+              <blockquote>"The story of a human being who has every reason to give up — and doesn’t."</blockquote>
+
+              <p>The title itself tells us everything. These four characters are travellers. But they are not travelling toward anything. They are travelling through — through loss, through uncertainty, through the long darkness of not knowing. And the "last night" is the night before something might change. The night when it would be easiest to stop. The night when most people put down the lamp. These four people do not put down the lamp. That is the whole story.</p>
+
+              <ul class="conclusion-lessons">
+                <li><strong>Ali</strong> teaches us that faithfulness is its own form of courage.</li>
+                <li><strong>Angoori</strong> teaches us that love grows in the ground of shared life.</li>
+                <li><strong>Namu</strong> teaches us that wisdom is not the absence of burden, but the ability to carry it lightly.</li>
+                <li><strong>Maggie</strong> teaches us that hope is something you do, not something you wait for.</li>
+              </ul>
+
+              <p>Together, they teach us that the human heart — wherever it is born, whatever language it speaks, whatever the particular shape of its grief — is built for exactly this. For continuing. For holding on. For keeping one small light alive in the dark, even when no one is coming to see it.</p>
+              
+              <p class="serif italic center" style="margin-top: 2rem; font-size: 1.2rem; color: var(--gold);">What 'Travellers of the Last Night' Really Means: Thank you for joining their journey.</p>
             </div>
           </div>
         </div>
@@ -317,6 +445,51 @@
               <h3 class="serif">Manvith</h3>
               <p class="id-tag">RA2511003010496</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: EBOOK FLIPBOOK -->
+      <section id="ebook-section" class="story-section-wrapper flipbook-promo">
+        <div class="container animate-up">
+          <div class="section-tag serif">Exclusive Access</div>
+          <h2 class="serif gold">The Full Narrative</h2>
+          <div class="ebook-cta">
+            <div class="ebook-mockup">
+              <img src="/images/ebook-cover.png" alt="Travellers of the Last Night Ebook Cover" />
+              <div class="mockup-shadow"></div>
+            </div>
+            <div class="cta-content">
+              <p class="serif italic">"Some stories are meant to be held. Some journeys are meant to be followed to the very last page."</p>
+              <p>Experience the complete, manuscript of <strong>Travellers of the Last Night</strong> in an immersive digital flipbook. Every word, every silence, preserved as it was written.</p>
+              <button class="btn-glow btn-open-flipbook" id="open-ebook">Open Digital Ebook</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FLIPBOOK OVERLAY -->
+        <div id="ebook-overlay" class="ebook-overlay">
+          <div class="overlay-controls">
+            <button class="btn-close-ebook" id="close-ebook" aria-label="Close ebook">&times;</button>
+            <div class="page-nav">
+              <button id="prev-page" class="nav-btn">&larr; Previous</button>
+              <span id="page-indicator">Page <span id="current-page-num">1</span> / <span id="total-pages-num">-</span></span>
+              <button id="next-page" class="nav-btn">Next &rarr;</button>
+            </div>
+            <button id="fullscreen-ebook" class="nav-btn">Fullscreen</button>
+          </div>
+          
+          <div class="flipbook-outer">
+            <div id="flipbook-viewport" class="flipbook-viewport">
+              <div id="flipbook" class="flip-book">
+                <!-- Pages injected here -->
+              </div>
+            </div>
+          </div>
+
+          <div class="loading-overlay" id="ebook-loading">
+            <div class="loader"></div>
+            <p class="serif">Inking pages...</p>
           </div>
         </div>
       </section>
