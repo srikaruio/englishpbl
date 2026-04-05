@@ -1,6 +1,5 @@
 import './style.css';
 import { setupQuiz } from './quiz';
-import { createStars } from './shared';
 
 // HERO ANIMATION SETUP
 const setupHeroAnimation = () => {
@@ -87,7 +86,28 @@ const setupHeroAnimation = () => {
     preloadImages();
 };
 
-// Intersection Observer, Story Expansion, Smooth Scroll
+// Create Starry Background
+const createStars = () => {
+    const container = document.getElementById('star-container');
+    if (!container) return;
+
+    const starCount = 150;
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        const size = Math.random() * 2 + 1;
+        star.style.left = `${x}vw`;
+        star.style.top = `${y}vh`;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        container.appendChild(star);
+    }
+};
+
+// Rest of the logic (Intersection Observer, Story Expansion, Smooth Scroll)
 const setupIntersectionObserver = () => {
     const observerOptions = {
         threshold: 0.1,
@@ -160,12 +180,10 @@ const setupSmoothScroll = () => {
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            const href = (link as HTMLAnchorElement).getAttribute('href');
-            
-            // Only handle smooth scroll for internal anchors (starting with #)
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
+            e.preventDefault();
+            const targetId = (link as HTMLAnchorElement).getAttribute('href');
+            if (targetId) {
+                const target = document.querySelector(targetId);
                 target?.scrollIntoView({ behavior: 'smooth' });
                 
                 // Close mobile menu after clicking
