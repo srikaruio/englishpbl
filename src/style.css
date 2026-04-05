@@ -122,7 +122,8 @@ h1, h2, h3, .serif {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.2rem; /* Further reduced gap to fit all 9 links on one line */
+  gap: 1.2rem;
+  margin-left: 4rem; /* Increased gap between logo and links */
 }
 
 .nav-links a {
