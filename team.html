@@ -9,6 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
     <style>
+      .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.5;
+        animation: twinkle linear infinite;
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      .animate-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
       .team-section {
         min-height: 100vh;
         display: flex;
@@ -140,13 +156,31 @@
     </main>
 
     <script type="module">
-      import { createStars } from './src/main.ts';
+      import { createStars } from '/src/main.ts';
       window.addEventListener('DOMContentLoaded', () => {
         createStars();
-        // Simple reveal animation
-        document.querySelectorAll('.animate-up').forEach(el => {
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
+        
+        // Use Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    (entry.target as HTMLElement).style.opacity = '1';
+                    (entry.target as HTMLElement).style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-up, .team-card').forEach(el => {
+            if (!el.classList.contains('team-card')) {
+                el.classList.add('animate-up');
+            }
+            observer.observe(el);
         });
       });
     </script>
