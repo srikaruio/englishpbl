@@ -186,10 +186,12 @@ const setupSmoothScroll = () => {
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = (link as HTMLAnchorElement).getAttribute('href');
-            if (targetId) {
-                const target = document.querySelector(targetId);
+            const href = (link as HTMLAnchorElement).getAttribute('href');
+            
+            // Only handle smooth scroll for internal anchors (starting with #)
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
                 target?.scrollIntoView({ behavior: 'smooth' });
                 
                 // Close mobile menu after clicking
