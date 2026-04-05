@@ -255,10 +255,10 @@ const style = document.createElement('style');
 style.innerHTML = `
   .reveal-left, .reveal-right, .reveal-up, .animate-up {
     opacity: 0;
-    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .reveal-left { transform: translateX(-100px); }
-  .reveal-right { transform: translateX(100px); }
+  .reveal-left { transform: translateX(-50px); }
+  .reveal-right { transform: translateX(50px); }
   .reveal-up, .animate-up { transform: translateY(100px); }
 
   .visible .reveal-left, .visible .reveal-right, .visible .reveal-up, 
