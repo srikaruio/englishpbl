@@ -120,7 +120,7 @@ h1, h2, h3, .serif {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 3rem;
+  gap: 2rem; /* Reduced gap to fit all items comfortably */
 }
 
 .nav-links a {
@@ -216,7 +216,20 @@ h1, h2, h3, .serif {
     direction: ltr;
   }
 
-  .content h2 {
+  .section-tag {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  padding: 0.3rem 1rem;
+  background: rgba(245, 197, 66, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(245, 197, 66, 0.2);
+}
+
+.content h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
   }
