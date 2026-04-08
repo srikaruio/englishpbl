@@ -10,11 +10,11 @@ const setupHeroAnimation = () => {
     if (!canvas || !context || !root) return;
 
     const startFrame = 1;
-    const endFrame = 61;
+    const endFrame = 85;
     const frameCount = endFrame - startFrame + 1;
 
     const currentFrame = (index: number) => (
-        `/hero-frames-new/ezgif-frame-${index.toString().padStart(3, '0')}.png`
+        `/hero-frames-v2/${index.toString().padStart(5, '0')}.png`
     );
 
     // Preload images
@@ -27,6 +27,10 @@ const setupHeroAnimation = () => {
             img.src = currentFrame(i);
             img.onload = () => {
                 loadedCount++;
+                if (loadedCount === 1) {
+                    // Render first frame as soon as it's ready
+                    renderFrame(startFrame);
+                }
                 if (loadedCount === frameCount) {
                     handleScroll();
                 }
@@ -35,13 +39,15 @@ const setupHeroAnimation = () => {
         }
     };
 
+    const updateCanvasSize = () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    };
+
     const renderFrame = (index: number) => {
         const imageIndex = index - startFrame;
         const image = images[imageIndex];
         if (!image || !image.complete || image.naturalWidth === 0) return;
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
 
         const imgWidth = image.width;
         const imgHeight = image.height;
@@ -55,7 +61,7 @@ const setupHeroAnimation = () => {
         const x = (screenWidth - newWidth) / 2;
         const y = (screenHeight - newHeight) / 2;
 
-        context.imageSmoothingEnabled = false; // "Hard switch" look
+        context.imageSmoothingEnabled = true; // Set to true for smoother transitions
         context.clearRect(0, 0, screenWidth, screenHeight);
         context.drawImage(image, x, y, newWidth, newHeight);
     };
@@ -80,9 +86,11 @@ const setupHeroAnimation = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', () => {
+        updateCanvasSize();
         handleScroll();
     });
 
+    updateCanvasSize();
     preloadImages();
 };
 
@@ -318,10 +326,11 @@ const setupFlipbook = () => {
             }
 
             // Initialize StPageFlip
+            const isMobile = window.innerWidth <= 768;
             // @ts-ignore
             pageFlip = new St.PageFlip(flipbookEl, {
-                width: 600, // base page width
-                height: 800, // base page height
+                width: isMobile ? 320 : 600, // base page width
+                height: isMobile ? 480 : 800, // base page height
                 size: "stretch",
                 minWidth: 315,
                 maxWidth: 1000,
@@ -329,7 +338,9 @@ const setupFlipbook = () => {
                 maxHeight: 1350,
                 maxShadowOpacity: 0.5,
                 showCover: true,
-                mobileScrollSupport: false
+                mobileScrollSupport: true,
+                usePortrait: isMobile,
+                flippingTime: 800
             });
 
             pageFlip.loadFromHTML(document.querySelectorAll('.page'));
